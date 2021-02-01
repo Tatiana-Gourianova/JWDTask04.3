@@ -4,10 +4,11 @@ import com.gourianova.myapp.dto.TextDto;
 import com.gourianova.myapp.task.*;
 import com.gourianova.texthandler.entity.TextComponent;
 import com.gourianova.texthandler.service.MarksRemover;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+@Slf4j
 public class TaskHandlerService {
 
     public static void handleTaskOne(TextDto dto, ArrayList<TextComponent> arrayList) {
@@ -36,8 +37,7 @@ public class TaskHandlerService {
                 textResult = textResult.concat("\n\t" + sentence + "\n");
             }
         } else {
-            //TODO: Change message here
-            textResult = "\n\t NONE SENTENCES WITH REAPEATED WORDS \n";
+            textResult = "\n\t NONE SENTENCES WITH REPEATED WORDS \n";
         }
         dto.setText(textResult);
     }
@@ -175,7 +175,6 @@ public class TaskHandlerService {
         //TODO: redo
         String wordStart = "Adam";
         String wordEnd = "pull";
-
         TaskEleven task = new TaskEleven(arrayList,  wordStart , wordEnd);
         String result = task.getResult();
         String textResult = "";

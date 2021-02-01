@@ -57,7 +57,7 @@ public class TextHandlerService {
                 break;
 
             default:
-                log.info("Please, don't use tasks9-13: they are under construction. Try type a number 1-8 or 14");
+                log.info("Please, don't use tasks 11-13: they are under construction. Try type a number 1-10 or 14");
 
             break;
         }

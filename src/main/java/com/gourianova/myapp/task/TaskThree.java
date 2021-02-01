@@ -4,6 +4,7 @@ import com.gourianova.texthandler.chainparser.SentenceParser;
 import com.gourianova.texthandler.entity.TextComponent;
 import com.gourianova.texthandler.entity.TextComposite;
 import com.gourianova.texthandler.service.MarksRemover;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.HashSet;

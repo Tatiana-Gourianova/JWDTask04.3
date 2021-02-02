@@ -59,8 +59,7 @@ public class TaskHandlerService {
     }
 
     public static void handleTaskFour(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: user input rewrite
-        int lengthOfWord = 5;
+        int lengthOfWord = dto.getLengthOfWord();;
         TaskFour task = new TaskFour(arrayList, lengthOfWord);
         String result = task.getResult();
         String textResult = "";
@@ -189,13 +188,12 @@ public class TaskHandlerService {
         dto.setText(textResult);
     }
     public static void handleTaskTwelve(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: user input rewrite
-        int lengthOfWord = 5;
+        int lengthOfWord = dto.getLengthOfWord();;
         TaskTwelve task = new TaskTwelve(arrayList, lengthOfWord);
         String result = task.getResult();
         String textResult = "";
         if (!result.isEmpty()) {
-            textResult = textResult.concat("\n\n\t TEXT WITHOUT WORDS" + lengthOfWord + "BEGINS ON CONSTANT:\n" + result + "\n\n");
+            textResult = textResult.concat("\n\n\t TEXT WITHOUT WORDS OF LENGTH EQUAL TO " + lengthOfWord + " BEGINS ON CONSTANT:\n" + result + "\n\n");
 
         } else {
             textResult = "\n\t NONE WORDS OF SUCH A LENGTH \n\n";

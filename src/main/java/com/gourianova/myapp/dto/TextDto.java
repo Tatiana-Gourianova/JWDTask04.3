@@ -11,4 +11,8 @@ public class TextDto implements Serializable {
 
     private String text;
     private Integer taskNumber;
+    private Integer lengthOfWord;
+
+//    public void getLengthOfWord() {
+  //  }
 }

@@ -24,8 +24,16 @@ public class AppClient {
         System.out.println(ClientConstants.USER_CHOOSE);
         BufferedReader inputUser = new BufferedReader(new InputStreamReader(System.in));
         Integer taskNumber = Integer.valueOf(inputUser.readLine());
+        Integer lengthOfWord=5;
+        switch (taskNumber){
+            case (4): System.out.println("Please, enter length of word");
+            lengthOfWord= Integer.valueOf(inputUser.readLine());
+            case (12): System.out.println("Please, enter length of word");
+                lengthOfWord= Integer.valueOf(inputUser.readLine());
 
-        UserInputDto request = new UserInputDto(taskNumber);
+        }
+
+        UserInputDto request = new UserInputDto(taskNumber,lengthOfWord);
         TextDto response = client.sendMessage(request);
         log.info("Result is: {}", response.getText());
     }

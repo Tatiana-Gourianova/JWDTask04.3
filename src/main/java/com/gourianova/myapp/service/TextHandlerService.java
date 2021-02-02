@@ -65,7 +65,7 @@ public class TextHandlerService {
             default:
                 //TODO: to correct
                 //TODO: to test all tasks
-                log.info("Please, don't use task 15; tasks 4, 9-13 are under construction. Try type a number 1-3, 5-8 or 14");
+                log.info("Please, don't use tasks 15,16; tasks 4, 9-13 are under construction. Try type a number 1-3, 5-8 or 14");
 
             break;
         }

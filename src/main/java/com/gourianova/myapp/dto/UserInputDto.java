@@ -12,4 +12,5 @@ import java.io.Serializable;
 public class UserInputDto implements Serializable {
 
     private Integer taskNumber;
+    private Integer lengthOfWord;
 }

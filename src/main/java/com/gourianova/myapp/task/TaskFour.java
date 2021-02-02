@@ -43,7 +43,7 @@ public class TaskFour {
 
             for (TextComponent words : wordsInSentence) {
 
-                if (words.toString().trim().length() == lengthOfWord) {
+                if (words.toString().trim().length() == lengthOfWord+1) {
                     differentWords.put(words.toString().trim(), words.toString().length());
                 }
 

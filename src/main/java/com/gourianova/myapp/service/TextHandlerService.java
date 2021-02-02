@@ -61,6 +61,8 @@ public class TextHandlerService {
             case (14):
                 handleTaskFourteen(dto, arrayList);
                 break;
+            case (15):
+                handleTaskFifteen(dto, arrayList);
 
             default:
                 //TODO: to correct

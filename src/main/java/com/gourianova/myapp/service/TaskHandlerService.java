@@ -222,7 +222,21 @@ public class TaskHandlerService {
         String largestPalindrome = task.getResult();
         String textResult = "";
         if (!largestPalindrome.isEmpty()) {
-            textResult = textResult.concat("\n\n The Largest palindrome is:  \n" + largestPalindrome + "\n");
+            textResult = textResult.concat("\n\n THE LARGEST PALINDROME IS:  \n" + largestPalindrome + "\n");
+
+        } else {
+            textResult = "NONE";
+        }
+        dto.setText(textResult);
+
+    }
+    public static void handleTaskFifteen(TextDto dto, ArrayList<TextComponent> arrayList) {
+
+        TaskFifteen task = new TaskFifteen(arrayList);
+        String newText = task.getResult();
+        String textResult = "";
+        if (!newText.isEmpty()) {
+            textResult = textResult.concat("\n\n THE NEW TEXT IS:  \n" + newText + "\n");
 
         } else {
             textResult = "NONE";

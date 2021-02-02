@@ -63,7 +63,10 @@ public class TextHandlerService {
                 break;
             case (15):
                 handleTaskFifteen(dto, arrayList);
-
+                break;
+            case (16):
+                handleTaskSixteen(dto, arrayList);
+                break;
             default:
                 //TODO: to correct
                 //TODO: to test all tasks

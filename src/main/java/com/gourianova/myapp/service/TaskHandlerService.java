@@ -244,5 +244,19 @@ public class TaskHandlerService {
         dto.setText(textResult);
 
     }
+    public static void handleTaskSixteen(TextDto dto, ArrayList<TextComponent> arrayList) {
+        Integer lengthOfWord= dto.getLengthOfWord();
+        String subString= dto.getWordStart();
+        TaskSixteen task = new TaskSixteen(arrayList,lengthOfWord,subString );
+        String newText = task.getResult();
+        String textResult = "";
+        if (!newText.isEmpty()) {
+            textResult = textResult.concat("\n\n THE NEW TEXT IS:  \n" + newText + "\n");
 
+        } else {
+            textResult = "NONE";
+        }
+        dto.setText(textResult);
+
+    }
 }

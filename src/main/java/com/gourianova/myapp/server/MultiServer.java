@@ -80,6 +80,10 @@ public class MultiServer {
                 //TODO: decide which user input server should ignore
                 while (userInput.getTaskNumber() != 20) {
                     textDto.setTaskNumber(userInput.getTaskNumber());
+                    textDto.setLengthOfWord(userInput.getLengthOfWord());
+                    textDto.setLetter(userInput.getLetter());
+                    textDto.setWordStart(userInput.getWordStart());
+                    textDto.setWordEnd(userInput.getWordEnd());
                     TextHandlerService.handle(textDto);
                     out.writeObject(textDto);
                 }

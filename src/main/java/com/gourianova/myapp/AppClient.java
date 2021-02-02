@@ -44,6 +44,11 @@ public class AppClient {
                 System.out.println("Please, enter word to end with");
                 wordEnd = inputUser.readLine().trim();
                 break;
+            case (16):
+                System.out.println("Please, enter a length of word");
+                lengthOfWord = Integer.valueOf(inputUser.readLine());
+                System.out.println("Please, enter a substring");
+                wordStart = inputUser.readLine().trim();
         }
 
         UserInputDto request = new UserInputDto(taskNumber, lengthOfWord, letter, wordStart, wordEnd);

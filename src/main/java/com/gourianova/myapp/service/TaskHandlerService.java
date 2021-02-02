@@ -142,6 +142,7 @@ public class TaskHandlerService {
     }
     public static void handleTaskNine(TextDto dto, ArrayList<TextComponent> arrayList) {
         //TODO: user input rewrite
+        //TODO: alphabetical order
        String letter="a";
         TaskNine task = new TaskNine(arrayList, letter);
         String result = task.getResult();
@@ -187,7 +188,37 @@ public class TaskHandlerService {
         }
         dto.setText(textResult);
     }
+    public static void handleTaskTwelve(TextDto dto, ArrayList<TextComponent> arrayList) {
+        //TODO: user input rewrite
+        int lengthOfWord = 5;
+        TaskTwelve task = new TaskTwelve(arrayList, lengthOfWord);
+        String result = task.getResult();
+        String textResult = "";
+        if (!result.isEmpty()) {
+            textResult = textResult.concat("\n\n\t TEXT WITHOUT WORDS" + lengthOfWord + "BEGINS ON CONSTANT:\n" + result + "\n\n");
 
+        } else {
+            textResult = "\n\t NONE WORDS OF SUCH A LENGTH \n\n";
+
+        }
+        dto.setText(textResult);
+    }
+    public static void handleTaskThirteen(TextDto dto, ArrayList<TextComponent> arrayList) {
+        //TODO: user input rewrite
+        //TODO: alphabetical order
+        String letter="a";
+        TaskNine task = new TaskNine(arrayList, letter);
+        String result = task.getResult();
+        String textResult = "";
+        if (!result.isEmpty()) {
+            textResult = textResult.concat("\n\n\t WORDS IN ORDER OF AMOUNT OF " + letter + ":\n" + result + "\n\n");
+
+        } else {
+            textResult = "\n\t NONE WORDS WITH "+letter+" \n\n";
+
+        }
+        dto.setText(textResult);
+    }
     public static void handleTaskFourteen(TextDto dto, ArrayList<TextComponent> arrayList) {
 
         TaskFourteen task = new TaskFourteen(arrayList);

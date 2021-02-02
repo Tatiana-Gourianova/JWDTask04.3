@@ -3,6 +3,7 @@ package com.gourianova.service;
 import java.util.*;
 
 public class SortByComparator {
+    //TODO: to examine and to correct
     public static Map<String, Integer> sortByComparator(Map<String, Integer> unsortMap) {
 
         List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(

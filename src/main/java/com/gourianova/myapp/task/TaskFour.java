@@ -24,17 +24,14 @@ public class TaskFour {
 
         HashSet<String> differentSentencesWithQuestionSign = new HashSet<>();
 
-        SentenceParser sentenceParser;
         for (TextComponent sentence : arrayList) {
             if (sentence.toString().contains("?")) {
-                sentenceParser = new SentenceParser();
 
                 differentSentencesWithQuestionSign.add(sentence.toString());
-
             }
         }
 
-        sentenceParser = new SentenceParser();
+        SentenceParser sentenceParser = new SentenceParser();
         HashMap<String, Integer> differentWords = new HashMap<>();
 
         for (Iterator<String> iter = differentSentencesWithQuestionSign.iterator(); iter.hasNext(); ) {
@@ -53,11 +50,9 @@ public class TaskFour {
             }
 
         }
-        System.out.println(differentWords);
         String result = SortByComparator.sortByComparator(differentWords).keySet().toString();
         MarksRemover lexemeRemover = new MarksRemover();
         result = lexemeRemover.remove(result);
-        System.out.println(result);
         this.result = result;
     }
 }

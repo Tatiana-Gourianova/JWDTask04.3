@@ -52,12 +52,20 @@ public class TextHandlerService {
             case (11):
                 handleTaskEleven(dto, arrayList);
                 break;
+            case (12):
+                handleTaskTwelve(dto, arrayList);
+                break;
+            case (13):
+                handleTaskThirteen(dto, arrayList);
+                break;
             case (14):
                 handleTaskFourteen(dto, arrayList);
                 break;
 
             default:
-                log.info("Please, don't use tasks 11-13: they are under construction. Try type a number 1-10 or 14");
+                //TODO: to correct
+                //TODO: to test all tasks
+                log.info("Please, don't use task 15; tasks 4, 9-13 are under construction. Try type a number 1-3, 5-8 or 14");
 
             break;
         }

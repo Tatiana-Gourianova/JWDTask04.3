@@ -12,7 +12,9 @@ public class TextDto implements Serializable {
     private String text;
     private Integer taskNumber;
     private Integer lengthOfWord;
+    private String letter;
+    private String wordStart;
+    private String wordEnd ;
 
-//    public void getLengthOfWord() {
-  //  }
+
 }

@@ -37,6 +37,10 @@ public class SingleServer {
             UserInputDto userInput = (UserInputDto) in.readObject();
             TextDto textDto = deserializationFromFile();
             textDto.setTaskNumber(userInput.getTaskNumber());
+            textDto.setLengthOfWord(userInput.getLengthOfWord());
+            textDto.setLetter(userInput.getLetter());
+            textDto.setWordStart(userInput.getWordStart());
+            textDto.setWordEnd(userInput.getWordEnd());
             TextHandlerService.handle(textDto);
             out.writeObject(textDto);
         } catch (IOException | ClassNotFoundException e) {
@@ -60,7 +64,7 @@ public class SingleServer {
             ClassLoader classLoader = AppClient.class.getClassLoader();
             String resource = requireNonNull(classLoader.getResource(FILE_PATH)).getFile();
             String text = readFileToString(new File(resource), UTF_8);
-            return new TextDto(text, 0,5);
+            return new TextDto(text, 0,5,"a","a","z");
         } catch (IOException ex) {
             log.error("Can't read resource for reason: {}", ex.getMessage());
             throw new RuntimeException("Can't read resource.");

@@ -20,20 +20,33 @@ public class AppClient {
         log.info("Client starting...");
         ExampleClient client = new ExampleClient();
         client.startConnection(CLIENT_IP, SERVER_PORT);
-
         System.out.println(ClientConstants.USER_CHOOSE);
         BufferedReader inputUser = new BufferedReader(new InputStreamReader(System.in));
         Integer taskNumber = Integer.valueOf(inputUser.readLine());
-        Integer lengthOfWord=5;
-        switch (taskNumber){
-            case (4): System.out.println("Please, enter length of word");
-            lengthOfWord= Integer.valueOf(inputUser.readLine());
-            case (12): System.out.println("Please, enter length of word");
-                lengthOfWord= Integer.valueOf(inputUser.readLine());
-
+        Integer lengthOfWord = 5;
+        String letter = "a";
+        String wordStart = "a";
+        String wordEnd = "z";
+        switch (taskNumber) {
+            case (4):
+            case (12):
+                System.out.println("Please, enter a length of word");
+                lengthOfWord = Integer.valueOf(inputUser.readLine());
+                break;
+            case (9):
+            case (13):
+                System.out.println("Please, enter a letter");
+                letter = inputUser.readLine().trim();
+                break;
+            case (11):
+                System.out.println("Please, enter word to start with");
+                wordStart = inputUser.readLine().trim();
+                System.out.println("Please, enter word to end with");
+                wordEnd = inputUser.readLine().trim();
+                break;
         }
 
-        UserInputDto request = new UserInputDto(taskNumber,lengthOfWord);
+        UserInputDto request = new UserInputDto(taskNumber, lengthOfWord, letter, wordStart, wordEnd);
         TextDto response = client.sendMessage(request);
         log.info("Result is: {}", response.getText());
     }

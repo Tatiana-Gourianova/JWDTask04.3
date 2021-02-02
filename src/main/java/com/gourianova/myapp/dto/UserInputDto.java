@@ -13,4 +13,8 @@ public class UserInputDto implements Serializable {
 
     private Integer taskNumber;
     private Integer lengthOfWord;
+    private String letter;
+    private String wordStart;
+    private String wordEnd ;
+
 }

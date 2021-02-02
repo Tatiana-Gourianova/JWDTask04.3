@@ -17,7 +17,7 @@ public class TaskHandlerService {
         String result = taskOne.getResult();
 
         if (result != null) {
-            textResult = textResult.concat("\n\n\t SENTENCE WITH THE LARGEST AMOUNT OF REAPEATED WORDS:\n")
+            textResult = textResult.concat("\n\n\t SENTENCE WITH THE LARGEST AMOUNT OF REPEATED WORDS:\n")
                     .concat("\n\t ****************************************************\n")
                     .concat(" \n\t" + result + "\n\n");
         } else {
@@ -59,7 +59,7 @@ public class TaskHandlerService {
     }
 
     public static void handleTaskFour(TextDto dto, ArrayList<TextComponent> arrayList) {
-        int lengthOfWord = dto.getLengthOfWord();;
+        int lengthOfWord = dto.getLengthOfWord();
         TaskFour task = new TaskFour(arrayList, lengthOfWord);
         String result = task.getResult();
         String textResult = "";
@@ -91,11 +91,11 @@ public class TaskHandlerService {
     public static void handleTaskSix(TextDto dto, ArrayList<TextComponent> arrayList) {
         TaskSix task = new TaskSix(arrayList);
         String textResult = "";
-        ArrayList<String> lexems = task.getLexems();
-        if (!lexems.isEmpty()) {
-            textResult = textResult.concat("\n\n WORD AT ALPHABTICAL ORDER:\n");
+        ArrayList<String> lexemes = task.getLexems();
+        if (!lexemes.isEmpty()) {
+            textResult = textResult.concat("\n\n WORD AT ALPHABETICAL ORDER:\n");
 
-            for (String words : lexems) {
+            for (String words : lexemes) {
                 textResult = textResult.concat("\n\n" + words + "\n");
 
             }
@@ -108,7 +108,7 @@ public class TaskHandlerService {
     public static void handleTaskSeven(TextDto dto, ArrayList<TextComponent> arrayList) {
         TaskSeven task = new TaskSeven(arrayList);
 
-        ArrayList<String> sorted = new ArrayList<>();
+        ArrayList<String> sorted;
         sorted = task.getResult();
         String textResult = "";
         if (!sorted.isEmpty()) {
@@ -125,7 +125,7 @@ public class TaskHandlerService {
     public static void handleTaskEight(TextDto dto, ArrayList<TextComponent> arrayList) {
 
         TaskEight task = new TaskEight(arrayList);
-        ArrayList<String> sorted = new ArrayList<>();
+        ArrayList<String> sorted;
         sorted = task.getResult();
         String textResult = "";
         MarksRemover marksRemover = new MarksRemover();
@@ -140,9 +140,9 @@ public class TaskHandlerService {
 
     }
     public static void handleTaskNine(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: user input rewrite
+
         //TODO: alphabetical order
-       String letter="a";
+       String letter=dto.getLetter();
         TaskNine task = new TaskNine(arrayList, letter);
         String result = task.getResult();
         String textResult = "";
@@ -157,7 +157,7 @@ public class TaskHandlerService {
     }
     public static void handleTaskTen(TextDto dto, ArrayList<TextComponent> arrayList) {
         //TODO: user input rewrite
-        ArrayList<String> list=new ArrayList<String>(Arrays.asList(new String[]{"Dad", "Madam", "Adam", "pull"}));
+        ArrayList<String> list= new ArrayList<>(Arrays.asList("Dad", "Madam", "Adam", "pull"));
         TaskTen task = new TaskTen(arrayList, list);
         String result = task.getResult();
         String textResult = "";
@@ -171,10 +171,10 @@ public class TaskHandlerService {
         dto.setText(textResult);
     }
     public static void handleTaskEleven(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: user input rewrite
         //TODO: redo
-        String wordStart = "Adam";
-        String wordEnd = "pull";
+
+        String wordStart = dto.getWordStart();
+        String wordEnd = dto.getWordEnd();
         TaskEleven task = new TaskEleven(arrayList,  wordStart , wordEnd);
         String result = task.getResult();
         String textResult = "";
@@ -188,7 +188,7 @@ public class TaskHandlerService {
         dto.setText(textResult);
     }
     public static void handleTaskTwelve(TextDto dto, ArrayList<TextComponent> arrayList) {
-        int lengthOfWord = dto.getLengthOfWord();;
+        int lengthOfWord = dto.getLengthOfWord();
         TaskTwelve task = new TaskTwelve(arrayList, lengthOfWord);
         String result = task.getResult();
         String textResult = "";
@@ -202,9 +202,8 @@ public class TaskHandlerService {
         dto.setText(textResult);
     }
     public static void handleTaskThirteen(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: user input rewrite
         //TODO: alphabetical order
-        String letter="a";
+        String letter=dto.getLetter();
         TaskNine task = new TaskNine(arrayList, letter);
         String result = task.getResult();
         String textResult = "";
@@ -220,10 +219,10 @@ public class TaskHandlerService {
     public static void handleTaskFourteen(TextDto dto, ArrayList<TextComponent> arrayList) {
 
         TaskFourteen task = new TaskFourteen(arrayList);
-        String largestPalindrom = task.getResult();
+        String largestPalindrome = task.getResult();
         String textResult = "";
-        if (!largestPalindrom.isEmpty()) {
-            textResult = textResult.concat("\n\n The Largest palindrom is:  \n" + largestPalindrom + "\n");
+        if (!largestPalindrome.isEmpty()) {
+            textResult = textResult.concat("\n\n The Largest palindrome is:  \n" + largestPalindrome + "\n");
 
         } else {
             textResult = "NONE";

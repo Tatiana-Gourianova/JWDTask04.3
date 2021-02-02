@@ -36,19 +36,20 @@ public class TaskEight {
                 vowels = "";
                 partOfWord = "";
                 partOfWord += words.toString();
-                boolean isBeginWithvowel=false;
+                boolean isBeginWithVowel=false;
 
+                //TODO: vowels += partOfWord.charAt(0); change for sb.append(vowels);
                 while (partOfWord.toLowerCase().matches("^(?i:[aeiouy]).*")) {
-                    isBeginWithvowel=true;
+                    isBeginWithVowel=true;
                     vowels += partOfWord.charAt(0);
                     partOfWord = partOfWord.substring(1);
 
                 }
-                if (isBeginWithvowel) {
+                if (isBeginWithVowel) {
                     wordsWithVowels.add(vowels + partOfWord.trim());
                     map.put(partOfWord, vowels);
                 } else if (partOfWord.toLowerCase().matches("\\s+(?i:[aeiouy]).*")) {
-                    isBeginWithvowel=true;
+                    isBeginWithVowel=true;
                     partOfWord = words.toString().toString();
                     //String vowelsRussian = "аоуэиыеёяю";
                     String vowelsEnglish = "aeiouy";
@@ -58,7 +59,7 @@ public class TaskEight {
                         partOfWord = partOfWord.substring(1);
 
                     }
-                    if (isBeginWithvowel) {
+                    if (isBeginWithVowel) {
                         wordsWithVowels.add(vowels + partOfWord.trim());
                         map.put(partOfWord, vowels);
                     }

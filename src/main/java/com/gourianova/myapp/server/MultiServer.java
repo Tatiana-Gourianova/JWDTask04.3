@@ -19,7 +19,7 @@ import static org.apache.commons.io.FileUtils.readFileToString;
 
 @Slf4j
 public class MultiServer {
-
+/*
     private static final String FILE_PATH = "resource.txt";
     private ServerSocket serverSocket;
 
@@ -95,4 +95,8 @@ public class MultiServer {
             }
         }
     }
+
+
+ */
 }
+

@@ -3,6 +3,7 @@ package com.gourianova.myapp.task;
 import com.gourianova.texthandler.chainparser.ParagraphParser;
 import com.gourianova.texthandler.entity.TextComponent;
 import com.gourianova.texthandler.entity.TextComposite;
+import com.gourianova.texthandler.service.MarksRemover;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -27,8 +28,6 @@ public class TaskSix {
             textComposite.addComponent(paragraphParser.parse(words.toString(), new TextComposite(TEXT)));
 
         }
-System.out.println( SentencesToSort);
-        System.out.println(textComposite);
 
         TreeMap<Character, ArrayList<String>> lexems = addSymbols();
         for (
@@ -45,21 +44,14 @@ System.out.println( SentencesToSort);
         }
 
         ArrayList<String> sortedWords=new ArrayList<>();
-        // TextComposite sortedWords=new TextComposite(TEXT);
         for (Map.Entry<Character, ArrayList<String>> entry : lexems.entrySet()) {
             entry.getValue().sort(Comparator.naturalOrder());
             if (!entry.getValue().isEmpty()) {
-                String LexemeRemove =  entry.getValue().toString().replace("?","");
-                LexemeRemove=LexemeRemove.replace(".","");
-                LexemeRemove=LexemeRemove.replace("[","");
-                LexemeRemove=LexemeRemove.replace("]","");
-                String LexemeRemoved=LexemeRemove.replace(",","");
+                String LexemeRemove =  entry.getValue().toString();
+                String LexemeRemoved=new MarksRemover().remove(LexemeRemove);
                 sortedWords.add(LexemeRemoved);
-
             }
-
         }
-
         this.lexems=sortedWords;    }
 
         private TreeMap<Character, ArrayList<String>> addSymbols () {

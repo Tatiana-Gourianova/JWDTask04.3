@@ -20,7 +20,7 @@ import static org.apache.commons.io.FileUtils.readFileToString;
 
 @Slf4j
 public class SingleServer {
-    private static final String FILE_PATH = "resource.txt";
+ /*   private static final String FILE_PATH = "resource.txt";
     private ServerSocket serverSocket;
     private Socket clientSocket;
     ObjectOutputStream out = null;
@@ -70,4 +70,6 @@ public class SingleServer {
             throw new RuntimeException("Can't read resource.");
         }
     }
+*/
 }
+

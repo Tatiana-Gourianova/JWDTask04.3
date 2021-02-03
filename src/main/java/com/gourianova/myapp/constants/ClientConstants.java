@@ -1,7 +1,7 @@
 package com.gourianova.myapp.constants;
 
 public class ClientConstants {
-//TODO: format constant
+
     public static final String USER_CHOOSE =  "Type the number: \n" +
             "\n" +
             "                        1 +\n" +

@@ -68,11 +68,8 @@ public class TextHandlerService {
                 handleTaskSixteen(dto, arrayList);
                 break;
             default:
-                //TODO: to correct
-                //TODO: to test all tasks
-                log.info("Please, don't use tasks 15,16; tasks 4, 9-13 are under construction. Try type a number 1-3, 5-8 or 14");
-
-            break;
+                 log.info("Please, 9-11 are under construction. Try type a number 1-8 or 12-16");
+                break;
         }
     }
 

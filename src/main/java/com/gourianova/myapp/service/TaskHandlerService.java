@@ -107,7 +107,6 @@ public class TaskHandlerService {
 
     public static void handleTaskSeven(TextDto dto, ArrayList<TextComponent> arrayList) {
         TaskSeven task = new TaskSeven(arrayList);
-
         ArrayList<String> sorted;
         sorted = task.getResult();
         String textResult = "";
@@ -123,7 +122,6 @@ public class TaskHandlerService {
     }
 
     public static void handleTaskEight(TextDto dto, ArrayList<TextComponent> arrayList) {
-
         TaskEight task = new TaskEight(arrayList);
         ArrayList<String> sorted;
         sorted = task.getResult();
@@ -140,7 +138,6 @@ public class TaskHandlerService {
 
     }
     public static void handleTaskNine(TextDto dto, ArrayList<TextComponent> arrayList) {
-
         //TODO: alphabetical order
        String letter=dto.getLetter();
         TaskNine task = new TaskNine(arrayList, letter);
@@ -171,7 +168,6 @@ public class TaskHandlerService {
         dto.setText(textResult);
     }
     public static void handleTaskEleven(TextDto dto, ArrayList<TextComponent> arrayList) {
-        //TODO: redo
 
         String wordStart = dto.getWordStart();
         String wordEnd = dto.getWordEnd();
@@ -204,7 +200,7 @@ public class TaskHandlerService {
     public static void handleTaskThirteen(TextDto dto, ArrayList<TextComponent> arrayList) {
         //TODO: alphabetical order
         String letter=dto.getLetter();
-        TaskNine task = new TaskNine(arrayList, letter);
+        TaskThirteen task = new TaskThirteen(arrayList, letter);
         String result = task.getResult();
         String textResult = "";
         if (!result.isEmpty()) {

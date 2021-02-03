@@ -37,8 +37,6 @@ public class TaskEight {
                 partOfWord = "";
                 partOfWord += words.toString();
                 boolean isBeginWithVowel=false;
-
-                //TODO: vowels += partOfWord.charAt(0); change for sb.append(vowels);
                 while (partOfWord.toLowerCase().matches("^(?i:[aeiouy]).*")) {
                     isBeginWithVowel=true;
                     vowels += partOfWord.charAt(0);
